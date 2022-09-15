@@ -1,0 +1,5 @@
+node_modules
+public
+fileStoreData
+.vscode
+.DS_Store

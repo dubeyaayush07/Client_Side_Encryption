@@ -1,0 +1,132 @@
+.box {
+	padding: $hmargin;
+	margin-bottom: $hmargin;
+
+	&>*:first-child {
+		margin-top: 0 !important;
+	}
+	&>*:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+.shortbox {
+	padding: 10px $hmargin;
+	margin-bottom: 10px;
+}
+
+.card {
+	box-shadow: 0 1px 3px -1px rgba(0,0,0,.1);
+}
+
+.inset {
+	background: rgba(0,60,60,.05);
+	box-shadow: inset 0 0 3px rgba(0,0,0,.1);
+	border-radius: 5px;
+}
+
+.icon {
+	color: #009dbd;
+	margin-right: 10px;
+}
+.icon-rotated {
+	transform: rotate(-20deg);
+}
+
+.icon-circle {
+	display: inline-block;
+	color: #fff;
+	width: 26px; height: 26px;
+	border-radius: 50%;
+	background: #009dbd;
+	font-size: 16px;
+  vertical-align: top;
+  margin-top: 3px;
+	margin-right: 10px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.loadingLayer {
+	position: fixed;
+	width: 100%; height: 100%;
+	left: 0; top: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: -1;
+	opacity: 1;
+	transition: opacity .3s;
+	color: #fff;
+
+	&.statusOk {
+		opacity: 0;
+	}
+
+	&.visible {
+		z-index: 10000;
+	}
+}
+
+.llContainer {
+	color: #eee;
+	background: rgba(0,0,0,0.2);
+	border: 10px solid transparent;
+	width: 200px;
+	height: 300px;
+	border-radius: 100px;
+	text-align: center;
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+	overflow: hidden;
+
+	.llTop {
+		height:50%;
+	}
+
+	.llBottom {
+		height: 50%;
+		background: rgba(255,255,255,.2);
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
+		padding-top: 32px;
+	}
+
+	i {
+		animation: spin 4s linear infinite;
+		font-size: 50px;
+		margin-top: 50px;
+		display: inline-block;
+	}
+}
+
+
+.ata {
+	max-height: 150px;
+	padding: 9px 15px 8px;
+}
+
+/* TABS */
+
+.tabHeader {
+	border-bottom: 1px solid rgba(0,0,0,.1);
+
+	a {
+		display: inline-block;
+		color: $dark-fade;
+		border-bottom: 3px solid transparent;
+		padding: 5px 15px;
+		margin-bottom: -2px;
+		font-size: 1.1em;
+
+		&:hover {
+			color: $blue2;
+		}
+
+		&.tabCurrent{
+			border-color: $blue1;
+			color: $dark-text;
+		}
+	}
+}
